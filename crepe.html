@@ -1,0 +1,279 @@
+<ion-view class="tab-body"  >
+   
+    
+    <ion-content style="background-image: url(img/bg.jpg) ;  background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;">
+      
+<!--      http://images.huffingtonpost.com/2013-02-06-5.jpg  -->
+         <div flex="100" style="margin:0px;padding:0px;" >
+               
+                <img src="img/crepe-stop-container-bottom.png" alt=""  height="8" >
+                   
+           </div>
+           
+           
+            <div layout="row" layout-align="center center">
+                 
+                
+               <div flex="50">
+               
+                <img src="img/Final-Logo.png" alt=""  height="40" >
+                   
+               </div>
+                 
+            </div>
+           
+        <div ng-cloak >
+  <md-content style=" background-image: url(img/bg.jpg) ;  background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; " >
+    
+       
+               
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Show All">
+        <md-content class="md-padding" id="tabs" >
+<!--          <h1 class="md-display-2">Show All</h1>-->
+          
+          <div ng-controller="showAll" ng-cloak>
+
+         
+          <div layout="row" layout-align="center center">
+                 
+            </div>
+   
+  
+          <md-content>
+            <md-list>
+              <md-list-item class="md-1-line" ng-repeat="menu in menus">
+                <div class="md-list-item-text" ng-click="showImage(menu.id)" >
+<!--                <div class="md-list-item-text" ng-click="alert(menu.name,menu.short_des,menu.price)" >-->
+<!--                <div class="md-list-item-text" ng-click="showAdvanced(menu.name)" >-->
+                  <h3 style="color:#ED135A;font-size:16px;font-family: 'Bree Serif';">{{menu.name}}</h3>
+                  <h4 style="font-family: Satisfy,'Open Sans',arial;font-size: 0.8rem;">{{menu.short_des}}</h4>
+<!--                  <p></p>-->
+                  <p></p>
+                </div>
+                <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">{{menu.price}}</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+                
+                
+                
+                  <script id="image-modal.html" type="text/ng-template">
+                   
+              <div class="modal image-modal transparent" ng-click="closeModal()">
+                 
+ 
+                  
+                 <ion-pane class=""  style="background:#ffffff;">
+
+              <md-content class="md-padding" layout-xs="column" layout="row">
+                <div flex-xs flex-gt-xs="50" layout="column">
+                  <md-card>
+                    <img ng-src="{{imageSrc}}" class="md-card-image" alt="Crepe Stop">
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline"  style="color:#ED135A;font-size:16px;font-family: 'Bree Serif';"> {{name}} </span>
+                      </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-content>
+                      <p style="font-family: Satisfy,'Open Sans',arial;font-size: 0.8rem;">
+                    {{short_des}}
+                    
+                      </p>
+                    </md-card-content>
+                     <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">Price: {{price}}</md-button>
+                  </md-card>
+                  </div>
+              </md-content>
+                      </ion-pane>
+      </script>
+                
+                
+                
+              </md-list-item>
+            </md-list>
+          </md-content>
+ 
+</div>
+
+        </md-content>
+      </md-tab>
+      
+<!--      Show All Tab End-->
+      
+<!--      Savoury Tab-->
+      
+       <md-tab label="Savoury" id="tabs"  >
+        <md-content class="md-padding" id="tabs">
+<!--          <h1 class="md-display-2">Show All</h1>-->
+          
+          <div ng-controller="showSavoury" ng-cloak>
+
+<!--
+          <md-toolbar class="md-theme-light" style="background:#ED135A;">
+           
+             <h2 class="md-toolbar-tools">
+            <span style="color:#FFFFFF;font-size:44px;line-height:55px;font-family: 'Satisfy', sans-serif;">Crepe Stop</span>
+              </h2>
+          </md-toolbar>
+-->
+
+
+            
+  
+          <md-content>
+            <md-list>
+               <md-list-item class="md-1-line" ng-repeat="menu in menus">
+<!--                <div class="md-list-item-text" ng-click="signup()" >-->
+<!--                <div class="md-list-item-text" ng-click="alert(menu.name,menu.short_des,menu.price)" >-->
+                      <div class="md-list-item-text" ng-click="showImage(menu.id)" >
+                 <h3 style="color:#ED135A;font-size:16px;font-family: 'Bree Serif';">{{menu.name}}</h3>
+                  <h4 style="font-family: Satisfy,'Open Sans',arial;font-size: 0.8rem;">{{menu.short_des}}</h4>
+                  <p></p>
+                </div>
+                <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">{{menu.price}}</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+                
+           <script id="image-modal.html" type="text/ng-template">
+                   
+              <div class="modal image-modal transparent" ng-click="closeModal()">
+                 
+ 
+                  
+                 <ion-pane class=""  style="background:#ffffff;">
+
+              <md-content class="md-padding" layout-xs="column" layout="row">
+                <div flex-xs flex-gt-xs="50" layout="column">
+                  <md-card>
+                    <img ng-src="{{imageSrc}}" class="md-card-image" alt="">
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline"  style="color:#ED135A;font-size:18px;font-family: 'Bree Serif';"> {{name}} </span>
+                      </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-content>
+                      <p style="font-family: Satisfy,'Open Sans',arial;font-size: 1.2rem;">
+                    {{short_des}}
+                      </p>
+                    </md-card-content>
+                     <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">Price: {{price}}</md-button>
+                  </md-card>
+                  </div>
+              </md-content>
+                      </ion-pane>
+      </script>
+             
+             
+              </md-list-item>
+            </md-list>
+          </md-content>
+          
+          
+          
+ 
+</div>
+
+        </md-content>
+      </md-tab>
+      
+      
+      <!--      Savourt Tab End-->
+      
+      <!--      Sweets Tab-->
+      
+       <md-tab label="Sweets" id="tabs"  >
+        <md-content class="md-padding" id="tabs">
+<!--          <h1 class="md-display-2">Show All</h1>-->
+          
+          <div ng-controller="showSweets" ng-cloak>
+
+<!--
+                  <md-toolbar class="md-theme-light" style="background:#ED135A;">
+                    <h2 class="md-toolbar-tools">
+                     
+                     <span style="color:#FFFFFF;font-size:44px;line-height:55px;font-family: 'Satisfy', sans-serif;">Crepe Stop</span>
+                     
+                     
+                    </h2>
+                  </md-toolbar>
+-->
+
+
+              <md-content>
+                    <md-list>
+                       <md-list-item class="md-1-line" ng-repeat="menu in menus">
+<!--                        <div class="md-list-item-text" ng-click="alert(menu.name,menu.short_des,menu.price)" >-->
+                        <div class="md-list-item-text" ng-click="showImage(menu.id)" >
+                          <h3 style="color:#ED135A;font-size:16px;font-family: 'Bree Serif';">{{menu.name}}</h3>
+                          <h4 style="font-family: Satisfy,'Open Sans',arial;font-size: 0.8rem;">{{menu.short_des}}</h4>
+                          <p></p>
+                        </div>
+                        <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">{{menu.price}}</md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                        
+                        
+                         <script id="image-modal.html" type="text/ng-template">
+                   
+              <div class="modal image-modal transparent" ng-click="closeModal()">
+                 
+ 
+                  
+                 <ion-pane class=""  style="background:#ffffff;">
+
+              <md-content class="md-padding" layout-xs="column" layout="row"  >
+                <div flex-xs flex-gt-xs="50" layout="column">
+                  <md-card>
+                    <img ng-src="{{imageSrc}}" class="md-card-image" alt="">
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline"  style="color:#ED135A;font-size:18px;font-family: 'Bree Serif';"> {{name}} </span>
+                      </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-content>
+                      <p style="font-family: Satisfy,'Open Sans',arial;font-size: 1.2rem;">
+                    {{short_des}}
+                      </p>
+                    </md-card-content>
+                     <md-button class="md-secondary" ng-disabled="true"  style="color:#000000;font-size:16px;line-height:55px;font-family:'staisfy'">Price: {{price}}</md-button>
+                  </md-card>
+                  </div>
+              </md-content>
+                      </ion-pane>
+      </script>
+                        
+                      </md-list-item>
+                    </md-list>
+                  </md-content>
+ 
+        </div>
+
+        </md-content>
+      </md-tab>
+      
+      
+       <!--      Savourt Tab End-->
+    
+     </md-tabs>
+    </md-content>
+   </div>
+   
+    
+<!--        illusion images-->
+    
+        <div id="tomato-half-images">
+           <img src="img/tomato_half.png" alt=""  height="120"> 
+       </div>
+       
+        <div id="leaves-images">
+           <img src="img/leaves.png" alt=""  height="140" > 
+       </div>
+
+<!--        illusion images-->
+   
+ </ion-content>
+</ion-view>
